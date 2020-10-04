@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html style="height:100%; width:100%;">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
@@ -18,16 +18,16 @@
     });
 
     window.fn = {};
-    window.fn.open = function() {
-      var menu = document.getElementById('menu');
-      menu.open();
-    };
+    // window.fn.open = function() {
+    //   var menu = document.getElementById('menu');
+    //   menu.open();
+    // };
     window.fn.load = function(page) {
       var content = document.getElementById('content');
-      var menu = document.getElementById('menu');
+      // var menu = document.getElementById('menu');
       content
         .load(page)
-        .then(menu.close.bind(menu));
+        // .then(menu.close.bind(menu));
     };
 
     if (ons.platform.isIPhoneX()) {
@@ -36,9 +36,9 @@
     }
   </script>
 </head>
-<body>
+<body style="height:100%, width:100%;">
   <ons-splitter>
-    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <!-- <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
       <ons-page>
         <ons-list>
           <ons-list-item onclick="fn.load('home.html')" tappable>
@@ -53,56 +53,12 @@
         </ons-list>
       </ons-page>
     </ons-splitter-side>
-    <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+    <ons-splitter-content id="content" page="home.html"></ons-splitter-content> -->
+
+    <ons-splitter-content id="content" page="html/Login.html">
+			<!-- この中にons-pageで画面を作るかpageにidをいれる -->
+		</ons-splitter-content>
   </ons-splitter>
-
-  <ons-template id="home.html">
-    <ons-page>
-      <ons-toolbar>
-        <div class="left">
-          <ons-toolbar-button onclick="fn.open()">
-            <ons-icon icon="ion-ios-menu, material:md-menu"></ons-icon>
-          </ons-toolbar-button>
-        </div>
-        <div class="center">
-          Main
-        </div>
-      </ons-toolbar>
-      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-        Swipe right to open the menu!
-      </p>
-    </ons-page>
-  </ons-template>
-
-  <ons-template id="settings.html">
-  <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="ion-ios-menu, material:md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-      <div class="center">
-        Settings
-      </div>
-    </ons-toolbar>
-  </ons-page>
-  </ons-template>
-
-  <ons-template id="about.html">
-  <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="ion-ios-menu, material:md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-      <div class="center">
-        About
-      </div>
-    </ons-toolbar>
-  </ons-page>
-  </ons-template>
 
 </body>
 </html>

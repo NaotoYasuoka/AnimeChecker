@@ -1,0 +1,51 @@
+<ons-page style="height:100%; width:100%;">
+  <ons-toolbar style="border-bottom:solid  5px #ff0000;">
+    <div class="center" style="font-family:arial black; font-size: 130%">
+      <strong><span style="color:red">Anime</span><span style="color:blue">Checker</span><strong>
+    </div>
+  </ons-toolbar>
+  <div style="width:100%; text-align:center; margin-top:30px;">
+    <div style="width:80%; display:inline-block;">
+      <div style="text-align:left; margin-left:17px;">
+        <strong>
+          <font size="5" color="#000000">新規登録</font>
+        </strong>
+      </div>
+      <div style="text-align:left;  margin-top:20px; margin-left:17px; font-size:13px">
+        <span style="color:red">(※)</span>ユーザー名を入力してください
+      </div>
+      <ons-list modifier="inset" style="width:90%; display: inline-block; margin-top:10px;">
+        <ons-list-item modifier="longdivider">
+          <ons-input id="username" placeholder="Username" float></ons-input>
+        </ons-list-item>
+      </ons-list>
+      <div style="text-align:left; margin-top:20px; margin-left:17px; font-size:13px">
+        <span style="color:red">(※)</span>パスワードを入力してください
+      </div>
+      <ons-list modifier="inset" style="width:90%; display: inline-block; margin-top:10px;">
+        <ons-list-item modifier="longdivider">
+          <ons-input id="password" type="password" placeholder="Password" float></ons-input>
+        </ons-list-item>
+      </ons-list>
+      <div style="text-align:left; margin-top:20px; margin-left:17px; font-size:13px">
+        メールアドレスを入力してください
+        <span style="text-align:right; margin-right:17px;">
+           <a href="" style="text-decoration:none;">詳細</a>
+        </span>
+      </div>
+      <ons-list modifier="inset" style="width:90%; display: inline-block; margin-top:10px;">
+        <ons-list-item modifier="longdivider">
+          <ons-input id="mail" placeholder="Mailaddress" float></ons-input>
+        </ons-list-item>
+      </ons-list>
+      <div style="text-align:left; margin-top:40px; margin-left:17px;">
+        <ons-checkbox input-id="check-2"></ons-checkbox>サインインしたままにする
+      </div>
+
+      <p style="margin-top: 40px;">
+        <ons-button onclick="login()" style="width:90%; background:red;">登録</ons-button>
+      </p>
+      <p style="font-size:12px;"><span style="color:red;">(※)</span>がついているところは必ず記入してください</p>
+    </div>
+  </div>
+</ons-page>
