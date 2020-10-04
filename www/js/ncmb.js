@@ -4,9 +4,9 @@ var DB_apikey = "dd343394ecb2ba600a887af4862990d7bd7eeacce134ec606b3f679fc04fd72
 var DB_clientkey = "55afb39d6e993ef53df4ba1084137637640d20d9c5374b3b39a44b4014403e86";
 var ncmb = new NCMB(DB_apikey, DB_clientkey);
 
-var DB_Goods = ncmb.DataStore("Users");
-var DB_Goods = ncmb.DataStore("TotalOpus");
-var DB_Goods = ncmb.DataStore("ThisSeason");
+var DB_Users = ncmb.DataStore("Users");
+var DB_Total = ncmb.DataStore("TotalOpus");
+var DB_Season = ncmb.DataStore("ThisSeason");
 
 function makeDataStore(DSName){
   var DBInfo = ncmb.DataStore(String(DSName));
