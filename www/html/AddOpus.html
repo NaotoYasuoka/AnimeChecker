@@ -1,0 +1,73 @@
+<ons-page id="AddOpus.html">
+  <ons-toolbar class="toolbar_block"> 
+    <div class="center">
+      <strong>作品の追加</strong>
+    </div>
+    <div class="left">
+      <ons-back-button onclick="fn.load('html/AllOpus.html')">Back</ons-back-button>
+    </div>
+  </ons-toolbar>
+
+  <ons-list>
+    <ons-list-item>
+      <ons-input id="SignIn_Username" placeholder="作品名" float style="width:100%;"></ons-input>
+    </ons-list-item>
+  </ons-list>
+  <div class="visual_top">
+    <div class="visual_size">
+      <div>
+        <img src="https://cinema.ne.jp/wp-content/uploads/2017/12/863b05763af081cb.jpg" onclick="fn.load('html/')">
+      </div>
+    </div>
+    <div style="background:#f8f8f8; width: 50%; height: calc(50vw *(37/26));">
+      <!-- <div class="use_evaluation"> -->
+        <textarea style="width:90%; height:90%;" placeholder="ストーリーを記述してください。"></textarea>
+      <!-- </div> -->
+    </div>
+  </div>
+  <ons-list style="width:100%">
+    <ons-list-header>
+        作品情報
+      </ons-list-header>
+      <ons-list-item>
+        タグ
+      </ons-list-item>
+      <ons-list-item>
+        <span class="material-icons">date_range</span>放送開始日
+      </ons-list-item>
+      <ons-list-item>
+        <span class="material-icons">apartment</span>制作会社
+      </ons-list-item>
+      <ons-list-header>
+        放送情報
+      </ons-list-header>
+      <ons-list-item>
+        <div class="left">
+          <img src="images/primevideo.png" style="width:25px; height:25px;">
+        </div>
+        <div class="right">
+          <ons-switch id="notice_1"></ons-switch>
+        </div>
+      </ons-list-item>
+      <ons-list-item>
+        <div class="left">
+          <img src="images/abematv.png" style="width:25px; height:25px;">
+        </div>
+        <div class="right">
+          <ons-switch id="notice_2"></ons-switch>
+        </div>
+      </ons-list-item>
+      <ons-list-item>
+        <span class="material-icons">ondemand_video</span>その他
+      </ons-list-item>
+      <ons-list-header>
+        情報サイト
+      </ons-list-header>
+      <ons-list-item>
+        <span class="material-icons">language</span>HP
+      </ons-list-item>
+      <ons-list-item>
+        <ons-icon icon="ion-social-twitter"></ons-icon>Twitter
+      </ons-list-item>
+  </ons-list>
+</ons-page>

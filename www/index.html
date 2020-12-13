@@ -10,7 +10,16 @@
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- js追加 -->
+  <script src="js/Login.js"></script>
+  <script src="js/MakeAccount.js"></script>
+  <script src="js/ncmb.js"></script>
+  <script src="js/Details.js"></script>
 
   <script>
     ons.ready(function() {
@@ -34,9 +43,45 @@
       document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
       document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
     }
+
+    // function BeginLoading() {
+    //   var modal = document.querySelector('ons-modal');
+    //   modal.show();
+    // }
+    // function EndLoading() {
+    //   var modal = document.querySelector('ons-modal');
+    //   modal.hide();
+    // }
+
+  let life = 100    
+
+  function alterLife( value ){
+    const lifeBar = document.getElementById('life-bar')         // ライフバー
+    const lifeMark = document.getElementById('life-mark')       // ライフの光部分                                          // ライフ初期値
+    lifeBar.style.width = "100%" 
+    // lifeの値を算出する
+    life += value 
+    if ( life <= 0 ){
+        // 算出の結果 0 以下になった場合
+        life = 0
+        // 0.3秒後に光部分を非表示にする
+        setTimeout(function(){
+            lifeMark.style.visibility = 'hidden'
+        }, 300)
+    } else {
+        // 算出の結果 100 を超過した場合
+        if ( life > 100 ) {
+            life = 100
+        }
+        // 光部分を表示する
+        lifeMark.style.visibility = 'visible'
+    }
+    // スタイル(幅)を更新する
+    lifeBar.style.width = life + "%"
+  }
   </script>
 </head>
-<body style="height:100%, width:100%;">
+<body>
   <ons-splitter>
     <!-- <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
       <ons-page>
@@ -61,4 +106,24 @@
   </ons-splitter>
 
 </body>
+
+
+<!-- <ons-modal direction="up">
+  <div style="text-align: center">
+    <p>
+      <ons-icon icon="md-spinner" size="28px" spin></ons-icon> Loading...
+    </p>
+  </div>
+</ons-modal> -->
+
+<ons-alert-dialog id="dialog-1">
+  <div class="alert-dialog-title">入力エラー</div>
+  <div class="alert-dialog-content">
+    入力できていません。全ての項目を入力してください。
+  </div>
+  <div class="alert-dialog-footer">
+    <ons-alert-dialog-button>OK</ons-alert-dialog-button>
+  </div>
+</ons-alert-dialog>
+
 </html>

@@ -1,0 +1,245 @@
+<ons-page id="Details">
+  <ons-toolbar> 
+    <div class="center">
+      <strong>AnimeChecker</strong>
+    </div>
+    <div class="left">
+      <ons-back-button onclick="fn.load('html/MyPage.html')">Back</ons-back-button>
+    </div>
+  </ons-toolbar>
+
+
+  <ons-list class="toolbar_block">
+    <ons-list-item style="width:100%; text-align: center; background:#ffcccc">
+      <div style="width:100%; display:inline-block;"><strong><big>天気の子</big></strong></div>
+    </ons-list-item>
+  </ons-list>
+
+
+  <!-- <div style='height:auto; width:100%; overflow-y:scroll; position: relative;'>
+  <ons-scroller id='searchScroll2' style="height:100%; width:100%;"> -->
+
+
+  <div class="visual_top">
+    <div class="visual_size">
+      <div class="background_black"><img src="https://hon-hikidashi.jp/wp-content/uploads/2019/04/190412tenkinoko-poster.jpg"></div>
+    </div>
+    <div class="evaluation">
+      <div>
+        <div style="height:40px; text-align:center;  margin-top: 5px; position: relative;">
+          <span class="font_yellow stars" style="display:inline-block;">
+            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span><span class="material-icons">star_border</span>
+          </span>
+        </div>
+        <div style='height:calc(100% - 60px); width:100%; overflow-y:scroll; position: relative;'>
+          <ons-scroller id='searchScroll2' style="height:100%; width:100%;">
+            <div style='height:100%; width:100%;'>
+             「あの光の中に、行ってみたかった」高１の夏。離島から家出し、東京にやってきた帆高。しかし生活はすぐに困窮し、孤独な日々の果てにようやく見つけた仕事は、怪しげなオカルト雑誌のライター業だった。彼のこれからを示唆するかのように、連日降り続ける雨。そんな中、雑踏ひしめく都会の片隅で、帆高は一人の少女に出会う。ある事情を抱え、弟とふたりで明るくたくましく暮らすその少女・陽菜。彼女には、不思議な能力があった。
+            </div>
+          </ons-scroller>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <ons-list id='searchList2' style="width:100%">
+      <ons-list-header>
+        視聴進捗
+      </ons-list-header>
+      <ons-list-item modifier="longdivider" style="width:100%"> 
+        <!-- https://web-breeze.net/life-gauge/ -->
+        <div id="life-frame">
+          <div id="life-bar"></div>
+          <div id="life-mark"></div>
+        </div>
+      </ons-list-item>
+      <ons-list-item modifier="longdivider" style="width:100%">
+        <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel" style="width:100%">
+          <ons-carousel-item style="width:100%">
+            <div class="story_carousel" style="display: -webkit-flex; display: flex; width:100%; text-align: center; font-size: 30px; color: #fff;">
+              <div style="width:2.5%;" class="background_lightblack">
+                <div class="r_arrow"></div>
+              </div>
+              <div style="width:95%; display:inline-block;">
+                <ons-button onclick="alterLife(-10)">1</ons-button>
+                <ons-button>2</ons-button>
+                <ons-button>3</ons-button>
+                <ons-button>4</ons-button>
+                <ons-button>5</ons-button>
+                <ons-button>6</ons-button>
+                <ons-button onclick="alterLife(10)">7</ons-button>
+              </div>
+              <div style="width:2.5%;" class="background_lightblack">
+                <div class="arrow"></div>
+              </div>
+            </div>
+          </ons-carousel-item>
+          <ons-carousel-item style="width:100%">
+            <div clss="story_carousel2" style="width:100%; text-align: center; font-size: 30px; color: #fff;">
+              <div style="display:inline-block; width:95%;">
+                <ons-button style="width:calc(100% / 8.8);">8</ons-button>
+                <ons-button style="width:calc(100% / 8.8);">9</ons-button>
+                <ons-button style="width:calc(100% / 8.8);">10</ons-button>
+                <ons-button style="width:calc(100% / 8.8);">11</ons-button>
+                <ons-button style="width:calc(100% / 8.8);">12</ons-button> 
+                <ons-button style="width:calc(100% / 8.8);">13</ons-button>
+                <ons-button style="width:calc(100% / 8.8);">14</ons-button>
+              </div>
+            </div>
+          </ons-carousel-item>
+        </ons-carousel>
+      </ons-list-item>
+      <ons-list-header>
+        作品情報
+    </ons-list-header>
+    <ons-list-item modifier="longdivider">
+      <div class="left">
+        <span class="material-icons" style="color:#CA1119">turned_in</span>
+      </div>
+      <div class="center" style="text-align: center;">
+        <span style="margin-right: 5px;">
+          <ons-button>日常</ons-button>
+        </span>
+        <span style="margin-right: 5px;">
+          <ons-button>雨</ons-button>
+        </span>
+        <span style="margin-right: 5px;">
+          <ons-button>新海誠</ons-button>
+        </span>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="longdivider">
+      <div class="left">
+        <span class="material-icons" style="color:#CA1119">subscriptions</span>
+      </div>
+      <div class="center">
+        <strong>-</strong>
+      </div>
+      <div class="right">
+        映画
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="longdivider">
+      <div class="left">
+        <span class="material-icons" style="color:#CA1119">apartment</span>
+      </div>
+      <div class="center">
+        <strong>CloverWorks</strong>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="longdivider">
+      <div class="left">
+        <span class="material-icons" style="color:#CA1119">date_range</span>
+      </div>
+      <div class="center">
+        <strong>2019/06/25(土) 23:30　</strong><small>テレビ東京</small>
+      </div>
+    </ons-list-item>
+    <ons-list-header>
+        作品情報
+    </ons-list-header>
+    <ons-list-item modifier="longdivider">
+      <div class="left">
+        <img src="images/primevideo.png" style="width:25px; height:25px;">
+      </div>
+      <div class="center">
+        <strong>毎週月曜日 00:00から</strong><small>(次回：2020/06/27)</small>
+      </div>
+      <div class="right">
+        <ons-switch id="notice_1"></ons-switch>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="longdivider">
+      <div class="left">
+        <img src="images/abematv.png" style="width:25px; height:25px;">
+      </div>
+      <div class="center">
+        <strong>毎週月曜日 00:00から</strong><small>(次回：2020/06/27)</small>
+      </div>
+      <div class="right">
+        <ons-switch id="notice_2"></ons-switch>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="longdivider">
+      <div class="left">
+        <span class="material-icons" style="color:#CA1119">ondemand_video</span>
+      </div>
+      <div class="center">
+        <strong>毎週月曜日 00:00から</strong><small>Netflixにて(次回：2020/06/27)</small>
+      </div>
+      <div class="right">
+        <ons-switch id="notice_3"></ons-switch>
+      </div>
+    </ons-list-item>
+    <ons-list-header>
+      情報サイト
+    </ons-list-header>
+    <ons-list-item modifier="longdivider">
+      <div class="left">
+        <span class="material-icons" style="color:#CA1119">language</span>
+      </div>
+      <div class="center">
+        https://girls-und-panzer-finale.jp/
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="longdivider">
+      <div class="left">
+        <ons-icon icon="ion-social-twitter"></ons-icon>
+      </div>
+      <div class="center">
+        ‎@garupan
+      <!-- </div>
+      </ons-list-item> -->
+  </ons-list>
+
+
+  </ons-scroller>
+  </div>
+      <!-- </ons-list-item>
+      <ons-list-header>
+        作品情報
+      </ons-list-header>
+      <ons-list-item>
+        タグ
+      </ons-list-item>
+      <ons-list-item>
+        <span class="material-icons">date_range</span>放送開始日
+      </ons-list-item>
+      <ons-list-item>
+        <span class="material-icons">apartment</span>制作会社
+      </ons-list-item>
+      <ons-list-header>
+        放送情報
+      </ons-list-header>
+      <ons-list-item>
+        <div class="left">
+          <img src="images/primevideo.png" style="width:25px; height:25px;">
+        </div>
+        <div class="right">
+          <ons-switch id="notice_1"></ons-switch>
+        </div>
+      </ons-list-item>
+      <ons-list-item>
+        <div class="left">
+          <img src="images/abematv.png" style="width:25px; height:25px;">
+        </div>
+        <div class="right">
+          <ons-switch id="notice_2"></ons-switch>
+        </div>
+      </ons-list-item>
+      <ons-list-item>
+        <span class="material-icons">ondemand_video</span>その他
+      </ons-list-item>
+      <ons-list-header>
+        情報サイト
+      </ons-list-header>
+      <ons-list-item>
+        <span class="material-icons">language</span>HP
+      </ons-list-item>
+      <ons-list-item>
+        <ons-icon icon="ion-social-twitter"></ons-icon>Twitter
+      </ons-list-item>
+    </div>
+    <div class="center">
+  </div> -->
+</ons-page>

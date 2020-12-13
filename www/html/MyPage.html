@@ -1,0 +1,172 @@
+<ons-page id="MakeAccount">
+  <ons-toolbar >
+    <div class="center">
+      <ons-segment id="segment" tabbar-id="tabbar" style="width: 200px">
+        <button>全作品</button>
+        <button>未視聴</button>
+        <button>視聴済み</button>
+      </ons-segment>
+    </div>
+  </ons-toolbar>
+
+  <div class="tabbar">
+    <label class="tabbar__item">
+      <input type="radio" name="tabbar-a" checked="checked" onclick="fn.load('html/MyPage.html')">
+      <button class="tabbar__button">
+        <i class="tabbar__icon ion-ios-square"></i>
+        <div class="tabbar__label">One</div>
+      </button>
+    </label>
+    <label class="tabbar__item">
+      <input type="radio" name="tabbar-a" onclick="fn.load('html/AllOpus.html')">
+      <button class="tabbar__button">
+        <i class="tabbar__icon ion-ios-radio-button-on"></i>
+       <div class="tabbar__label">Two</div>
+      </button>
+    </label>
+    <label class="tabbar__item">
+      <input type="radio" name="tabbar-a">
+      <button class="tabbar__button">
+        <i class="tabbar__icon ion-ios-star"></i>
+        <div class="tabbar__label">Three</div>
+      </button>
+    </label>
+  </div>
+
+  <div style="width:100%; height:calc(100% - 50px);">
+    <div style="width:100%; height:50px; text-align:center; border-bottom:solid  4px #dcdcdc;">
+      <!-- <span style="text-align: center; margin-top:10px; width:80%;"> -->
+      <p style="text-align:center; width:80%; display: inline-block; margin-top: 10px;">
+        <ons-search-input
+          placeholder="Search"
+          onchange="ons.notification.alert('Searched for: ' + this.value)"
+          style="width:100%;">   
+        </ons-search-input>
+      </p>
+      <!-- </span> -->
+    </div>
+    <!-- <div style='position:absolute; top: 0; left: 0; height:calc(100vh - 150px); width:100%;'>
+      <ons-fab style="position:absolute; top:100%; left:calc(100%-30px);">
+        <ons-icon icon="md-plus"></ons-icon>
+      </ons-fab>
+    </div> -->
+    <div style='height:calc(100% - 50px); width:100%;'>
+      <!-- <div style='position: absolute; top: 0; right: 0; height:calc(100% - 800px); width:100%;'>
+        <ons-fab position="bottom right">
+          <ons-icon icon="md-plus"></ons-icon>
+        </ons-fab>
+      </div> -->
+      <div style="height:100%; width:100%; overflow-y:scroll;">
+      <ons-scroller id='searchScroll' style="height: 10%">
+        <ons-list id='searchList'>
+          <ons-list-item modifier="chevron" onclick="fn.load('html/Details.html')" tappable>
+            <div class="center">
+              <span class="list-item__title"><strong>ガールズ＆パンツァー</strong></span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+            <div class="left">
+              <img class="list-item__thumbnail" src="https://hon-hikidashi.jp/wp-content/uploads/2019/04/190412tenkinoko-poster.jpg" style=" width:40px; height:40px; object-fit: cover;">
+            </div>
+          </ons-list-item>
+          <ons-list-item tappable>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+            <div class="left">
+              <img class="list-item__thumbnail" src="https://ogre.natalie.mu/media/news/comic/2020/0524/kanokari.jpg?imwidth=750" style=" width:40px; height:40px; object-fit: cover;">
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </ons-scroller>
+    </div>
+
+</ons-page>

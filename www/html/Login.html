@@ -1,7 +1,7 @@
-<ons-page style="height:100%; width:100%;">
-  <ons-toolbar style="border-bottom:solid  5px #ff0000;">
-    <div class="center" style="font-family:arial black; font-size: 130%">
-      <strong><span style="color:red">Anime</span><span style="color:blue">Checker</span><strong>
+<ons-page id="Login">
+  <ons-toolbar>
+    <div class="center" style="font-size: 130%;">
+      <strong>AnimeChecker<strong>
     </div>
   </ons-toolbar>
   <div style="width:100%; text-align:center; margin-top:30px;">
@@ -12,22 +12,22 @@
         </strong>
       </div>
       <ons-list modifier="inset" style="width:90%; display: inline-block; margin-top:10px;">
-        <ons-list-item modifier="longdivider">
-          <ons-input id="username" placeholder="Username" float></ons-input>
+        <ons-list-item modifier="longdivider" style="width:100%;">
+          <ons-input id="SignIn_Username" placeholder="EmailAddress" float style="width:100%;"></ons-input>
         </ons-list-item>
-        <ons-list-item modifier="longdivider">
-          <ons-input id="password" type="password" placeholder="Password" float></ons-input>
+        <ons-list-item modifier="longdivider" style="width:100%;">
+          <ons-input id="SignIn_Password" type="password" placeholder="Password" float style="width:100%;"></ons-input>
         </ons-list-item>
       </ons-list>
       <br><br>
       <div style="text-align:left; margin-left:17px;">
-        <ons-checkbox input-id="check-2"></ons-checkbox>サインインしたままにする
+        <ons-checkbox input-id="signIn_check-1"></ons-checkbox>サインインしたままにする
       </div>
       <p style="margin-top: 40px;">
-        <ons-button onclick="login()" style="width:90%; background:red;">サインイン</ons-button>
+        <ons-button onclick="Signin()" style="width:90%; background:red;">サインイン</ons-button>
       </p>
       <div style="text-align:right; margin-right:17px; font-size: 12px">
-        <a href="" style="text-decoration: none;">パスワードを忘れた方</a>
+        <a onclick="fn.load('html/MyPage.html')" style="text-decoration: none;">パスワードを忘れた方</a>
       </div>
       <br><br><br>
       <div style="font-size:12px">AnimeCheckerの新しいお客様ですか？</div>
